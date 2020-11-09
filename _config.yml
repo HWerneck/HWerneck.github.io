@@ -13,14 +13,10 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: MM
+title: Henrique Werneck •
 email:
-description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
-twitter_username: username
-github_username: username
+description: Henrique Werneck's home site.
+github_username: HWerneck
 minimal_mistakes_skin: default
 search: true
 
@@ -58,34 +54,31 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  name: "Henrique Werneck"
+  avatar: "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRyUkeqiMnyaGJ-Mr2aA394b1Zs5PLFCWzeZw&usqp=CAU"
+  bio: "Robotics, Artificial Intelligence, Gaming, Research and Learning."
   links:
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      url: "https://"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
+    - label: "Home site"
+      icon: "fa fa-link"
+      url: "https://hwerneck.github.io/"
+    - label: "E-Mail"
+      icon: "fa fa-envelope-square"
+      url: "mailto:werneck.henrique@outlook.com"
+    - label: "E-Mail (UFABC)"
+      icon: "fa fa-envelope-square"
+      url: "mailto:henriquewerneck@ufabc.edu.br"
     - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
+      icon: "fa fa-github-square"
+      url: "https://github.com/HWerneck/"
+      - label: "Google Scholar"
+      icon: "ai ai-google-scholar-square"
+      url: "http://scholar.google.com/"
+      - label: "LinkedIn"
+      icon: "fa fa-linkedin-square"
+      url: "https://www.linkedin.com/in/hwerneck/"
 
 footer:
   links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/"
 
 defaults:
   # _posts
