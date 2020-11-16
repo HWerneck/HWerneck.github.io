@@ -1,1 +1,1 @@
-This is here only to create the folder.
+This is here only to create the Jekyll folder.
