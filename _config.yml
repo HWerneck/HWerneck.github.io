@@ -34,23 +34,29 @@ bing_verify:
 # Links to include in top navigation
 # For external links add external: true
 links:
-  - title: Curriculum
-    url: /cv/
-  - title: Blog
-    url: /blog/
-  - title: Articles
-    url: /articles/
-  - title: Projects
-    url: /projects/
+  - title: About
+    url: /about/
+  #- title: Studios
+  #  url: /studios/
+  - title: Robotics
+    url: /robotics/
+  - title: Artificial Intelligence
+    url: /artificial_intelligence/
+  - title: Games
+    url: /games/
+  - title: Teachings
+    url: /teachings/
   - title: Readings
     url: /readings/
-  - title: Publications
-    url: /publications/
-  - title: Tools
-    url: /tools/
+  - title: Research
+    url: /research/
+  #- title: Projects
+  #  url: /projects/
+  - title: Blog
+    url: /blog/
 
-# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone:    America/Chicago
+
+# ARRUMAR A PARTIR DAQUI
 future:      true
 #pygments:    true
 highlighter: rouge
