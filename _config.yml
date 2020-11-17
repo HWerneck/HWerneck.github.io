@@ -9,7 +9,9 @@ url:              https://hwerneck.github.io
 # Owner/author information
 owner:
   name:                   Henrique Werneck
-  avatar:                 /author_images/Lei-Bio-Medium.jpg
+  complete-name:          Henrique Lima Rissardo Werneck
+  name-with-initials:     Henrique LR Werneck
+  #avatar:                 /author_images/Lei-Bio-Medium.jpg
   bio:                    Robotics, Artificial Intelligence, Gaming, Research and Learning.
   email:                  werneck.henrique@outlook.com
   institutional-email:    henrique.werneck@ufabc.edu.br
