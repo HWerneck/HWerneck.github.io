@@ -1,10 +1,12 @@
-# The code used here was based on Lei Mao's website (https://leimao.github.io) implementation, provided as example by himself.
-# Thanks a lot, Lei Mao.
+<!-- The code used here was based on Lei Mao's website (https://leimao.github.io) implementation, provided as example by himself. -->
+<!-- Thanks a lot, Lei Mao. -->
 
 <div class="headbar">
+  
   <div class="site-home">
     <a href="{{ site.url }}">Henrique Werneck's Home</a>
   </div><!-- /site-home -->
+  
   <div class="menubar">
     <nav role="navigation" id="site-nav" class="nav">
       <ul>
@@ -14,7 +16,17 @@
       </ul>
     </nav>
   </div><!-- /menubar -->
-  <div class="language-option">
+  
+  <div class="language-menu">
+    <button onclick="languageDropdownButton()" class="languageButton">{{ current.language }}</button>
+      <div id="languageOptions" class="language-options">
+        <!-- <a>Deutsch</a> -->
+        <a>English</a>
+        <!-- <a>Español</a> -->
+        <!-- <a>Italiano</a> -->
+        <a>Português (BR)</a>
+      </div><!-- /language-options -->
     <button>English</button>
-  </div><!-- /language-option -->
+  </div><!-- /language-menu -->
+  
 </div><!-- /headbar -->
