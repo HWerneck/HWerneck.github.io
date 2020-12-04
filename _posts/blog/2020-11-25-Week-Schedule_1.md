@@ -56,11 +56,11 @@ The games I plan to play this week are:
 
 So I decided to go back to reading last couple of weeks, a lot thanks to [this podcast](https://podcasts.apple.com/us/podcast/15-interview-juvoni-beckford-edge-tomorrow-streaks/id1329414452?i=1000413129788)(which I actually heard a few months ago), but also in line with an idea I have for years.
 I want to read the great books and authors in their own language. I do not mind if I read them in Portuguese first, or even in English. Still, I insist on reading them as they were originally written. Authors like Dante Alighieri, Isaac Asimov, J RR Tolkien, Friedrich Nietzsche, Jules Verne and William Shakespeare are in the list. Maybe I'll share it once it is more filled.
-I'll also write reviews for the books I read, whether they are literature, academic books or simple children's books. Without further ado, the books:
+I'll also write reviews for the books I read, whether they are literature, academic books or simple children's books. So I do not cause a mess with eventually already translated book and its titles and all that, I will be listing the books with the name of the copy I am reading, avoiding to translate them. Without further ado, the books:
 
-• Harry Potter and the Philosopher's Stone - JK Rowling
-• The Little Prince - Antoine de Saint-Exupéry
-• The Art of Being Right - Arthur Schopenhauer
+• Harry Potter e a Pedra Filosofal - JK Rowling
+• O Pequeno Príncipe - Antoine de Saint-Exupéry
+• A Arte de Ter Razão - 38 Estratagemas - Arthur Schopenhauer
 • 20-ish children's books
 
 ###Writing
