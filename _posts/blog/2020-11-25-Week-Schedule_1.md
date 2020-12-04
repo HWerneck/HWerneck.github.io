@@ -2,7 +2,7 @@
 title: Week Schedule #1
 layout: week-schedule
 created: 2020-11-25
-last-modified: 2020-11-25
+last-modified: 2020-12-04
 categories: blog, week-schedule
 tags: [Blog, Week-Schedule]
 comments: false
@@ -13,14 +13,16 @@ So, this is the first post of my blog! HOORAY!
 I thought about it, and decided to start with the simplest post, which is going to be weekly and serve me an important purpose.
 For this weekly series of posts, I will list what I am scheduling for the week. These are meant to be short, with topics that regard what I am developing, studying, playing, reading, writing and watching, beside others. I want to share how I am organizing myself and how far I was able to go comparing past weeks.
 
-This first post is a little different as I am explaining the idea of the series too, but I will try to always start with a paragraph giving reason to the schedule based on what the week is looking like. This week (I think) I will also do that for every section, to help fit in what I'm talking about.
+This first post is a little different as I am explaining the idea of the series too, but I will try to always start with a paragraph giving reason to the schedule based on what the week is looking like. This week (I think) I will also do that for every section, to help readers understand what I'm talking about.
 
 This week I am full with a bunch of stuff from college, as deadlines are approaching (that's also part of the reason the site isn't looking prettier by now). That is occupying most my free time, but with 10-15 min breaks I hope to advance through everything I list here.
 
 ###Master and college
 
-YES! I am currently enrolled in a Master program, in Computer Science. At the same time, I am a Computer Science undergrad student (read [here]() to un-explode your mind and recollect your brain).
-
+YES! I am currently enrolled in a Master program, in Computer Science. At the same time, I am a Computer Science undergrad student (read [here](https://hwerneck.github.io/about) to un-explode your mind and recollect your spilled brains from the floor).
+For this quadmester, I joined two classes: Enterpreunership and Compilers.
+For this week, I simply expect to finally catch up with the content I've missed when I got married.
+That, and a little push on the master's dissertation.
 
 ###Playing
 
@@ -54,7 +56,7 @@ The games I plan to play this week are:
 
 So I decided to go back to reading last couple of weeks, a lot thanks to [this podcast](https://podcasts.apple.com/us/podcast/15-interview-juvoni-beckford-edge-tomorrow-streaks/id1329414452?i=1000413129788)(which I actually heard a few months ago), but also in line with an idea I have for years.
 I want to read the great books and authors in their own language. I do not mind if I read them in Portuguese first, or even in English. Still, I insist on reading them as they were originally written. Authors like Dante Alighieri, Isaac Asimov, J RR Tolkien, Friedrich Nietzsche, Jules Verne and William Shakespeare are in the list. Maybe I'll share it once it is more filled.
-I'll also write reviews for the books I read, whether they are literature or academic books. Without further ado, the books:
+I'll also write reviews for the books I read, whether they are literature, academic books or simple children's books. Without further ado, the books:
 
 • Harry Potter and the Philosopher's Stone - JK Rowling
 • The Little Prince - Antoine de Saint-Exupéry
@@ -64,12 +66,12 @@ I'll also write reviews for the books I read, whether they are literature or aca
 ###Writing
 
 Last week I started writing my first book.
-I've realized I started wrong, though. Too complicated (how life ruined me).
+I've realized I started wrong, though. Too complicated (reflection of how life ruined me).
 
 I intent to continue the book this week, but the right way: simple!
 I will not reveal details about the book for now.
 
-As for academic writings, I am working on my dissertation as mentioned above. Besides, I'm compiling a few classes on reinforcement learning and deep learning (though I'll postpone that to next week or later, in December).
+As for academic writings, I am working on my dissertation as mentioned above. Besides, I was compiling a few classes on reinforcement learning and deep learning, but I will postpone that to December.
 
 ###Watching
 
