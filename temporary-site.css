@@ -12,7 +12,7 @@ a
   text-decoration: none;
 }
   
-.biophoto
+.bio-photo
 {
-  cli-path: circle(100px at center);
+  clip-path: circle(100px at center);
 }
