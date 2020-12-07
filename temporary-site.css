@@ -1,10 +1,10 @@
 body
 {
-  color: black;
+  color: green;
   background-color: white;
 }
   
-/*bio-photo
+bio-photo
 {
   cli-path: circle(100px at center);
-}*/
+}
