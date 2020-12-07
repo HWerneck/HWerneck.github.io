@@ -30,8 +30,8 @@ The games I am playing this week are:
 • Call of Duty: Modern Warfare Remastered
 • Erica
 
-EDIT: I am a fucking retard. I accidentally got the platinum for Horizon Chase Turbo. I never felt bad with a platinum before, that's new. Oh, my dear Horizon Chase Turbo.
-But as the challenge is mine with myself, I'll account it the day I go for my plats (I did the effort to leave a single trophy behind. It is not my fault the game glitched on me and popped the trophy before I completed its requirement).
+EDIT: I am a fucking retard. I accidentally got the platinum for Horizon Chase Turbo. My dear Horizon Chase Turbo.
+But as the challenge is mine with myself, I will take it into account in the day I go for my plats (I did the effort to leave a single trophy behind. It is not my fault the game glitched on me and popped the trophy before I completed its requirement).
 
 ###Studying
 
