@@ -9,9 +9,13 @@ comments: false
 share: true
 ---
 
-Here we go again, another week schedule post.
-College is under control again with one discipline ending with a presentation on Thursday. I am planning to take a few leaps in my master course this week.
-Challenges of the week involve more practical stuff. To the schedule.
+This week starts with a very special event. Today is dad's birthday.
+
+HAPPY BIRTHDAY, DAD! YOU ARE AWESOME AND I LOVE YOU!
+
+Second to that, tomorrow is the deadline to send our compiler project. At midnight tomorrow, college vacations.
+That does not mean a quiet week. Actually, the very opposite is more like it.
+This week will be marked by a very strong will of doing everything I can. I'll try to channel that towards the main focus: IJCAI 2021.
 
 ###Master and college
 
@@ -22,11 +26,11 @@ With that I mean whenever you want to do work on your master's agenda, there wil
 
 ###Playing
 
-The games I am playing this week are:
+Vacations from college (at least undergrad)! This means I expect to be done with more in the gaming scope. The aim of the week is to be done with Uncharted: Drakes's Fortune and Erica specifically. By the way, I'm enjoying GTA V a lot, since now I have actual friends to play with. I'm also considering creating a Twitch channel. Let's see how that goes after some pros and cons. Without further ado, the games of the week are:
 
+• Grand Theft Auto V
 • Uncharted: Drake's Fortune
 • FIFA 19
-• Grand Theft Auto V
 • Erica
 
 ###Studying
