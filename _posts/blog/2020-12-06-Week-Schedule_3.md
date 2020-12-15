@@ -16,9 +16,9 @@ Challenges of the week involve more practical stuff. To the schedule.
 ###Master and college
 
 Finally Enterpreunership will end. I am the presenter of our company idea, with an aeroponics greenhouse for kitchens. Thursday baby.
-This week's work load is unaltered, though. I have got another exciting project to finish, the compiler of the discipline Compilers (didn't see that coming, eh?).
-Also, ~~in epic narrator voice~~HE WHO WALKS THE PATH OF THE MASTER, SHALL NEVER MEET A MOMENT OF PEACE.
-That means whenever you want to do something about your master work, there will be work, and it haunts you. And so, this week, I plan to catch up with a good part of my master's work.
+This week's work load is unaltered, though. I have got another project to finish: the compiler of the discipline Compilers.
+Also, ~~in epic narrator voice~~ HE WHO TRAILS THE PATH OF THE MASTER, SHALL NEVER MEET A MOMENT OF PEACE.
+With that I mean whenever you want to do work on your master's agenda, there will be work, and it haunts you. I don't think I will have much time to work on it, but I will sure give it a try.
 
 ###Playing
 
