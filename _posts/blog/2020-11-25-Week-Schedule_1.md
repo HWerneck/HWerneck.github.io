@@ -10,17 +10,17 @@ share: true
 ---
 
 So, this is the first post of my blog! HOORAY!
-I thought about it, and decided to start with the simplest post, which is going to be weekly and serve me an important purpose.
+I thought about it, and decided to start with the simplest type of post possible, which is going to be weekly and serve me an important purpose.
 For this weekly series of posts, I will list what I am scheduling for the week. These are meant to be short, with topics that regard what I am developing, studying, playing, reading, writing and watching, beside others. I want to share how I am organizing myself and how far I was able to go comparing past weeks.
 
-This first post is a little different as I am explaining the idea of the series too, but I will try to always start with a paragraph giving reason to the schedule based on what the week is looking like. This week (I think) I will also do that for every section, to help readers understand what I'm talking about.
+This first post is a little different as I am explaining the idea of the series, but I will try to always start with a paragraph giving reason to the schedule based on what the week is looking like. This week (I think) I will also do that for every section, to help readers understand what I'm talking about in each section.
 
 This week I am full with a bunch of stuff from college, as deadlines are approaching (that's also part of the reason the site isn't looking prettier by now). That is occupying most my free time, but with 10-15 min breaks I hope to advance through everything I list here.
 
 ###Master and college
 
 YES! I am currently enrolled in a Master program, in Computer Science. At the same time, I am a Computer Science undergrad student (read [here](https://hwerneck.github.io/about) to un-explode your mind and recollect your spilled brains from the floor).
-For this quadmester, I joined two classes: Enterpreunership and Compilers.
+For this third of the year (how is this called? not semester, not quarter...) (also, in UFABC we have 4-month periods, intead of the more usual semesters)... Well, for this third of the year, I joined two classes: Enterpreunership and Compilers.
 For this week, I simply expect to finally catch up with the content I've missed when I got married.
 That, and a little push on the master's dissertation.
 
