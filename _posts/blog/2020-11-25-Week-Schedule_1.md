@@ -27,9 +27,9 @@ That, and a little push on the master's dissertation.
 ###Playing
 
 Playing! MUAHAHAHA
-I am an avid game player and I play a lot on PlayStation (currently at PlayStation 4, with two-to-four reminiscent games to play on PlayStation 3). I am a trophy hunter, but I do it for fun. I believe hunting trophies allows us to experince the game in its full (but I admit it gets out of hand from time to time).
+I am an avid game player and I play a lot on my PlayStation (currently at PlayStation 4, with two-to-four reminiscent games to play on PlayStation 3). I am a trophy hunter, but I do it for fun. I believe hunting trophies allows us to experince the game in its full (but I admit it gets out of hand from time to time).
 
-My last challenges regarding trophy hunting was to get Metal Gear Solid V: The Phantom Pain (my favorite franchise *----*) as my 50th platinum. My current challenge is to complete as many platinums as I can in a single day. After attaining platinum in Metal Gear Solid V, I started playing games, letting a single trophy before platinum (preferably, a simple one, so I can get maximize the platinums in a single day).
+My last challenges regarding trophy hunting was to get Metal Gear Solid V: The Phantom Pain (my favorite franchise *----*) as my 50th platinum. My current challenge is to complete as many platinums as I can in a single day. After attaining platinum in Metal Gear Solid V, I started playing games, letting a single unattained trophy before platinum (preferably, a simple one, so I can maximize the platinums I get in a single day).
 
 The games I plan to play this week are:
 
@@ -54,7 +54,7 @@ The games I plan to play this week are:
 
 ###Reading
 
-So I decided to go back to reading last couple of weeks, a lot thanks to [this podcast](https://podcasts.apple.com/us/podcast/15-interview-juvoni-beckford-edge-tomorrow-streaks/id1329414452?i=1000413129788) (which I actually heard a few months ago), but also in line with an idea I have for years.
+I decided to go back to reading somewhere between the last couple of weeks, a lot thanks to [this podcast](https://podcasts.apple.com/us/podcast/15-interview-juvoni-beckford-edge-tomorrow-streaks/id1329414452?i=1000413129788) (which I actually heard a few months ago), but also in line with an idea I have had for years.
 I want to read the great books and authors in their own language. I do not mind if I read them in Portuguese first, or even in English. Still, I insist on reading them as they were originally written. Authors like Dante Alighieri, Isaac Asimov, J RR Tolkien, Friedrich Nietzsche, Jules Verne and William Shakespeare are in the list. Maybe I'll share it once it is more filled.
 I'll also write reviews for the books I read, whether they are literature, academic books or simple children's books. So I do not cause a mess with eventually already translated book and its titles and all that, I will be listing the books with the name of the copy I am reading, avoiding to translate them. Without further ado, the books:
 
@@ -75,7 +75,7 @@ As for academic writings, I am working on my dissertation as mentioned above. Be
 
 ###Watching
 
-Paloma signed in the free test week of Disney Plus. We are watching Disney movies from childhood to recent movies.
+Paloma (the beautiful wife) signed up for the free test week of Disney Plus. We are watching Disney movies from childhood to recent movies.
 I would like to highlight:
 
 • *Forky Asks a Question*:
@@ -83,7 +83,7 @@ I would like to highlight:
 
 • *The Little Prince*:
     We watched it on Netflix. One of the movies that made me happier in recent times, so much I am reading the book.
-    Beautiful movie with one of the most beautiful arts I have ever seen. A masterpiece.
+    Beautiful movie with one of the most beautiful works of art I have ever seen. A masterpiece.
 
 • Disney movies.
 
