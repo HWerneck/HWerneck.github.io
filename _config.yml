@@ -42,14 +42,14 @@ links:
     url: /robotics/
   - title: Artificial Intelligence
     url: /artificial_intelligence/
-  - title: Games
-    url: /games/
+  #- title: Games
+  #  url: /games/
   - title: Teachings
     url: /teachings/
   - title: Readings
     url: /readings/
-  - title: Research
-    url: /research/
+  #- title: Research
+  #  url: /research/
   #- title: Projects
   #  url: /projects/
   - title: Blog
