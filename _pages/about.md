@@ -1,0 +1,1 @@
+New pages' folder
