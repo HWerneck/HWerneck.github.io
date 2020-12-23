@@ -1,10 +1,10 @@
 ---
 title: Week Schedule #4
-layout: week-schedule
+layout: schedule
 created: 2020-12-13
 last-modified: 2020-12-22
-categories: blog, week-schedule
-tags: [Blog, Week-Schedule]
+categories: blog, week-schedule, schedule
+tags: [Blog, Week-Schedule, Schedule]
 comments: false
 share: true
 ---
