@@ -1,9 +1,9 @@
 ---
 title: Week Schedule #2
-layout: week-schedule
+layout: schedule
 created: 2020-11-29
 last-modified: 2020-12-04
-categories: blog, week-schedule
+categories: blog, week-schedule, schedule
 tags: [Blog, Week-Schedule]
 comments: false
 share: true
