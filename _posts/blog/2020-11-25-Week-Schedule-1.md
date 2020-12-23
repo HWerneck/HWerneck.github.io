@@ -4,7 +4,7 @@ layout: schedule
 created: 2020-11-25
 last-modified: 2020-12-04
 categories: blog, week-schedule, schedule
-tags: [Blog, Week-Schedule]
+tags: [Blog, Week-Schedule, Schedule]
 comments: false
 share: true
 ---
