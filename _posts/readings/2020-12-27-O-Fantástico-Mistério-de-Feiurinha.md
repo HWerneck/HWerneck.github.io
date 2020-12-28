@@ -1,5 +1,5 @@
 ---
-title: O Fantástico Mistério de Feiurinha
+title: The Fantastic Mystery of Feiurinha
 layout: readings
 created: 2020-12-27
 last-modified: 2020-12-27
