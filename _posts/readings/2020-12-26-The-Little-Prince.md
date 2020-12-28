@@ -1,5 +1,5 @@
 ---
-title: The Little Prince
+title: O Pequeno Príncipe
 layout: readings
 created: 2020-12-26
 last-modified: 2020-12-27
@@ -9,7 +9,7 @@ comments: true
 share: true
 ---
 O Pequeno Príncipe
-IMAGE
+BOOK COVER
 English: The Little Prince
 Original: Le Petit Prince
 
