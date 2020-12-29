@@ -37,7 +37,7 @@ But as the challenge is mine with myself, I will take it into account in the day
 
 • Artificial Intelligence:
     Introduction to Deep Learning - Kaggle
-    Simonini Thomas' tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
+    Thomas Simonini's tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
     Natural Language Processing - Kaggle (added later, since it was so small and felt like fun)
 
 • Programming:
@@ -58,9 +58,7 @@ The books I plan to read this week are:
 
 ###Writing
 
-Last week was not very good on the writing department.
-I simply intent to continue the book this week, hopefully, with another chapter.
-
+Last week was not very good on the writing department. I simply intent to continue the book this week, hopefully, with another chapter.
 As for academic writings, I am working on my dissertation as mentioned somewhere (COFF COFF).
 
 ###Watching
