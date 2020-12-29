@@ -32,7 +32,7 @@ The games I am playing this week are:
 ###Studying
 
 • Artificial Intelligence:
-    Simonini Thomas' tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
+    Thomas Simonini's tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
     Natural Language Processing - Kaggle (added later, since it was so small and felt like fun)
 
 • Programming:
