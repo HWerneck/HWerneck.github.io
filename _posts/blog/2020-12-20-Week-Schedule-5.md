@@ -19,8 +19,6 @@ This is the second to last week of the year. A magical week, no matter your orig
 Love more. I interpret Jesus "love" as "respect". Respect more. You do not need to agree in everything. We only need one of each of us in the world. And John Lennon had it all figured out. All you need is love. For you and whoever is around you.
 Let's move to the week schedule.
 
-
-
 ###Master and college
 
 College vacations. Ah!
@@ -34,11 +32,12 @@ The aim of the week is the same as the past week. I thought I was going to move 
 • Uncharted: Drake's Fortune
 • FIFA 19
 • Erica
+• LEGO Harry Potter: Years 1-4 (started playing with the wife XD)
 
 ###Studying
 
 • Artificial Intelligence:
-    Simonini Thomas' tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
+    Thomas Simonini's tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
 
 • Programming:
     Programming for internet. This week specifically, Vue and the combo HTML, CSS and Javascript.
@@ -48,10 +47,9 @@ The aim of the week is the same as the past week. I thought I was going to move 
 
 ###Reading
 
-The books I plan to read this week are:
+The book I plan to read this week is:
 
 • Harry Potter e a Câmara Secreta - J. K. Rowling
-• A Arte de Ter Razão - 38 Estratagemas - Arthur Schopenhauer
 
 ###Writing
 
