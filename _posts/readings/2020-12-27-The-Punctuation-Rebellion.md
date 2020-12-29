@@ -11,10 +11,11 @@ share: true
 
 A Rebelião da Pontuação
 BOOK COVER
-English: The Punctuation Rebellion (freely translated, as there is no translated version of the book)
 Original: A Rebelião da Pontuação
+Author: William Tucci
+English: The Punctuation Rebellion (freely translated, as there is no translated version of the book)
 
-*The Punctuation Rebellion* is one of the first books I have read and liked, when a kid. It was entertaining and also raised my attention to grammar. Yep! Grammar, dude.
+*The Punctuation Rebellion* is one of the first books I have read and liked when a kid. It was entertaining and also raised my attention to grammar. Yep! Grammar, dude.
 
 In a fun way, good for kids (and for adults with grammar or memory issues), the book explores what would happen to language if the punctuation decided to rebel. It shows us why using the punctuation is important, using it correctly.
 
