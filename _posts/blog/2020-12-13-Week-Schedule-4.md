@@ -14,8 +14,7 @@ This week starts with a very special event. Today is dad's birthday.
 HAPPY BIRTHDAY, DAD! YOU ARE AWESOME AND I LOVE YOU!
 
 Second to that, tomorrow is the deadline to send our compiler project. At midnight tomorrow, college vacations.
-That does not mean a quiet week. Actually, the very opposite is more like it.
-This week will be marked by a very strong will of doing everything I can. I'll try to channel that towards the main focus: IJCAI 2021.
+That does not mean the week is a quiet week. Actually, the very opposite is more like it. This week will be marked by a very strong will of doing everything I can. I'll try to channel that towards the main focus: IJCAI 2021.
 
 ###Master and college
 
@@ -34,7 +33,7 @@ Vacations from college (at least undergrad)! This means I expect to be done with
 ###Studying
 
 • Artificial Intelligence:
-    Simonini Thomas' tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
+    Thomas Simonini's tutorial on Deep Reinforcement Learning - [Link](https://www.freecodecamp.org/news/an-introduction-to-reinforcement-learning-4339519de419/)
 
 • Programming:
     Compilers (for the [IsiLanguange](https://github.com/professorisidro/IsiLanguageEmbriao))
