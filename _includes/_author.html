@@ -6,7 +6,7 @@
 {% elsif site.owner.avatar contains 'https://' %}
 	<img src="{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name-with-initials }}"></a>
 {% else %}
-	<img src="{{ site.url }}/images/{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name-with-initials }}"></a>
+	<img src="{{ site.url }}/_resources/images{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name-with-initials }}"></a>
 {% endif %}
 <h3>{{ site.owner.name }}</h3>
 <p>{{ site.owner.bio }}</p>
