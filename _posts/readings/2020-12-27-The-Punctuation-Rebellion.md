@@ -8,6 +8,7 @@ tags: [Blog, Readings]
 comments: true
 share: true
 ---
+
 A Rebelião da Pontuação
 BOOK COVER
 English: The Punctuation Rebellion (freely translated, as there is no translated version of the book)
