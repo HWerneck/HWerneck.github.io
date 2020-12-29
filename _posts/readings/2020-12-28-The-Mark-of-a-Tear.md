@@ -8,6 +8,7 @@ tags: [Blog, Readings]
 comments: true
 share: true
 ---
+
 A Marca de Uma Lágrima
 BOOK COVER
 Original: A Marca de Uma Lágrima
