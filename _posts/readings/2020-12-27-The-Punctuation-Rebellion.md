@@ -1,5 +1,5 @@
 ---
-title: A Rebelião da Pontuação
+title: The Punctuation Rebellion
 layout: readings
 created: 2020-12-27
 last-modified: 2020-12-27
