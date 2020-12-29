@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: main-page
 ---
 <div class="main" style="white-space: pre-line">
   <h3>About me</h3>
