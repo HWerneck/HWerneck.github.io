@@ -1,5 +1,5 @@
 ---
-title: O Pequeno Príncipe
+title: The Little Prince
 layout: readings
 created: 2020-12-26
 last-modified: 2020-12-27
