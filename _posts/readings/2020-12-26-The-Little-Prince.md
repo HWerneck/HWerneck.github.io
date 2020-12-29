@@ -11,8 +11,9 @@ share: true
 
 O Pequeno Príncipe
 BOOK COVER
-English: The Little Prince
 Original: Le Petit Prince
+Author: Antoine de Saint-Exupéry
+English: The Little Prince
 
 The Little Prince. I have heard about and seen this book a lot before reading it. I thought it seemed like another children's book. Maybe a story for girls, about this little prince and stuff. Boring and unworthy of attention, certainly.
 
