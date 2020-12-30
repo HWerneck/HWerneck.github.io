@@ -1,6 +1,11 @@
 ---
 title: The Fantastic Mystery of Feiurinha
+bbook-title: O Fantástico Mistério de Feiurinha
+book-cover: 
+book-original-title: O Fantástico Mistério de Feiurinha
+book-current-language-title: The Fantastic Mystery of Feiurinha
 layout: readings
+language: English
 created: 2020-12-27
 last-modified: 2020-12-28
 categories: blog, readings
