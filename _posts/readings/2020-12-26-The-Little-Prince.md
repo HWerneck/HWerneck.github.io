@@ -1,5 +1,9 @@
 ---
 title: The Little Prince
+book-title: O Pequeno Príncipe
+book-cover: 
+book-original-title: Le Petit Prince
+book-current-language-title: The Little Prince
 layout: readings
 language: English
 created: 2020-12-26
@@ -8,10 +12,6 @@ categories: blog, readings
 tags: [Blog, Readings]
 comments: true
 share: true
-book-title: O Pequeno Príncipe
-book-cover: 
-book-original-title: Le Petit Prince
-book-current-language-title: The Little Prince
 ---
 
 O Pequeno Príncipe
