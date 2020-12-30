@@ -1,6 +1,11 @@
 ---
 title: The Punctuation Rebellion
+book-title: A Rebelião da Pontuação
+book-cover: 
+book-original-title: A Rebelião da Pontuação
+book-current-language-title: The Punctuation Rebellion
 layout: readings
+language: English
 created: 2020-12-27
 last-modified: 2020-12-27
 categories: blog, readings
