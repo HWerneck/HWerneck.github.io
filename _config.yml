@@ -3,7 +3,8 @@ description:      Welcome to my home site.
 # Your site's domain goes here. Leave localhost server or blank when working locally.
 url:              https://hwerneck.github.io
 #http://localhost:5000
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes@4.21.0
+minimal_mistakes_skin: default
 
 
 
@@ -59,6 +60,31 @@ links:
 
 
 # ARRUMAR A PARTIR DAQUI
+include:
+  - _pages
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+      author_profile: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      author_profile: true
+      
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+
 future:      true
 #pygments:    true
 highlighter: rouge
