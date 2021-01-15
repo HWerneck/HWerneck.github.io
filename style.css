@@ -24,16 +24,16 @@ header
   background-color: red;
 }
 
-.menubar
-{
-  float: right;
-  background-color: green;
-}
-
 .language-menu
 {
   float: right;
   background-color: blue;
+}
+
+.menubar
+{
+  float: right;
+  background-color: green;
 }
 
 .main
