@@ -1,0 +1,24 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+body
+{
+  font-family: PT Sans Narrow, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+a
+{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+  
+.bio-photo
+{
+  clip-path: circle(200px at center);
+}
