@@ -26,13 +26,13 @@ header
 
 .menubar
 {
-  float: right;
+  float: left;
   background-color: green;
+  list-style-type: none;
 }
 
 .language-menu
 {
-  clear: both;
   float: right;
   background-color: blue;
 }
