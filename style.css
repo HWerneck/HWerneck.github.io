@@ -11,18 +11,6 @@ body
   background-color: white;
 }
 
-a
-{
-  font-weight: bold;
-  color: black;
-  text-decoration: none;
-}
-  
-.bio-photo
-{
-  clip-path: circle(200px at center);
-}
-
 header
 {
   height: 50px;
@@ -43,6 +31,11 @@ header
   float: right;
 }
 
+.main
+{
+  clear: both;
+}
+
 .article-author-side
 {
   width: 30%;
@@ -59,4 +52,16 @@ footer
 {
   clear: both;
   height: 30px;
+}
+
+a
+{
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+  
+.bio-photo
+{
+  clip-path: circle(200px at center);
 }
