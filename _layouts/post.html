@@ -14,11 +14,12 @@
       {% include _navigation.html %}     
     </header>
     
-    <div>
+    <div class="main">
       <div class="article-author-side">
         {% include _author.html %}
       </div>
-      <div class="main">
+      
+      <div class="main-content">
         <article>
           <div class="headline-wrap">
             {% if page.link %}
@@ -41,9 +42,9 @@
 
           </div><!-- /.article-wrap -->
         </article>
-      </div>
+      </div><!-- /.main-content -->
       
-    </div>
+    </div><!-- /.main -->
     
     <footer>
       {% include _footer.html %}
