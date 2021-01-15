@@ -22,3 +22,41 @@ a
 {
   clip-path: circle(200px at center);
 }
+
+header
+{
+  height: 50px;
+}
+
+.site-home
+{
+  float: left;
+}
+
+.menubar
+{
+  float: center;
+}
+
+.language-menu
+{
+  float: right;
+}
+
+.article-author-side
+{
+  width: 30%;
+  float: left;
+}
+
+.main
+{
+  width: 70%;
+  float: right;
+}
+
+footer
+{
+  clear: both;
+  height: 30px;
+}
