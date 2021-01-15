@@ -14,21 +14,25 @@ body
 header
 {
   height: 50px;
+  
 }
 
 .site-home
 {
   float: left;
+  background-color: red;
 }
 
 .menubar
 {
   float: left;
+  background-color: green;
 }
 
 .language-menu
 {
   float: right;
+  background-color: blue;
 }
 
 .main
@@ -40,12 +44,14 @@ header
 {
   width: 30%;
   float: left;
+  background-color: red;
 }
 
 .main-content
 {
   width: 70%;
   float: right;
+  background-color: green;
 }
 
 footer
