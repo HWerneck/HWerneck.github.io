@@ -2,13 +2,13 @@ body
 {
   font-family: PT Sans Narrow, sans-serif;
   color: black;
-  background-color: white;
+  background-color: black;
 }
 
 a
 {
   font-weight: bold;
-  color: black;
+  color: white;
   text-decoration: none;
 }
   
