@@ -30,6 +30,7 @@ a
 {
     .site-title
     {
+        color: green;
         margin-bottom: 10px;
     }
 }
@@ -37,7 +38,9 @@ a
 /********** Medium devices **********/
 @media (min-width: 992px) and (min-width: 1199px)
 {
-    .site-title {
+    .site-title
+    {
+        color: red;
         margin-bottom: 10px;
     }
 }
@@ -47,6 +50,7 @@ a
 {
     .site-title
     {
+        color: blue;
         margin-bottom: 10px;
     }
 }
@@ -56,6 +60,7 @@ a
 {
     .site-title
     {
+        color: orange;
         margin-bottom: 10px;
     }
 }
