@@ -17,8 +17,45 @@ a
 {
   font-weight: bold;
 }
-  
+
 .bio-photo
 {
-  clip-path: circle(200px at center);
+    clip-path: circle(200px at center);
+}
+
+
+
+/********** Large devices **********/
+@media (min-width: 1200px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Medium devices **********/
+@media (min-width: 992px) and (min-width: 1199px)
+{
+    .site-title {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Small devices **********/
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Extra small devices **********/
+@media (max-width: 767px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
 }
