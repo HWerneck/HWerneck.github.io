@@ -5,6 +5,7 @@
     border: 0px;
     background: #FFFFFF;
     font-family: PT Sans Narrow, sans-serif;
+    font-size: medium;
     text-decoration: none;
     color: #000000;
 }
@@ -13,15 +14,60 @@ body
 {
 }
 
+h1
+{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
 a
 {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 .bio-photo
 {
     clip-path: circle(200px at center);
 }
+
+.dropdown
+{
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-menu
+{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    margin-top: 5px;
+}
+
+.dropdown-item
+{
+    display: block;
+    padding: 10px 8px;
+    font-size: small;
+    font-weight: bold;
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+.projects-dropdown-menu
+{
+    paddng: 16px;
+    border: none;
+}
+
+.dropdown:hover .dropdown-menu
+{
+    display: block;
+}
+
+.dropdown-item:hover {background-color: #dddddd;}
 
 
 
