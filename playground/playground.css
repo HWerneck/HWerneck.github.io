@@ -1,0 +1,64 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background: #FFFFFF;
+    font-family: PT Sans Narrow, sans-serif;
+    font-size: medium;
+    text-decoration: none;
+    color: #000000;
+}
+
+body
+{
+}
+
+h1
+{
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+a
+{
+    font-weight: bold;
+}
+
+
+
+/********** Large devices **********/
+@media (min-width: 1200px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Medium devices **********/
+@media (min-width: 992px) and (max-width: 1199px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Small devices **********/
+@media (min-width: 768px) and (max-width: 991px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
+
+/********** Extra small devices **********/
+@media (max-width: 767px)
+{
+    .site-title
+    {
+        margin-bottom: 10px;
+    }
+}
