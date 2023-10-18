@@ -11,7 +11,7 @@
 
 class Bubbles {
 public:
-  void create(GLuint program, int quantity, int speed);
+  void create(GLuint program, int quantity);
   void paint();
   void destroy();
   void update(float deltaTime);
@@ -21,8 +21,6 @@ public:
     GLuint m_VBO{};
     GLuint m_VBOPositions{};
     GLuint m_VBOColors{};
-    glm::ivec2 m_viewportSize{};
-    float m_bubblespeed{};
 
     float m_angularVelocity{};
     glm::vec4 m_color{1};
@@ -36,7 +34,7 @@ public:
 
   std::list<Bubble> m_bubbles;
 
-  Bubble makeBubble(int avgSpeed = 30, glm::vec2 translation = {}, float scale = 0.25f);
+  Bubble makeBubbles(glm::vec2 translation = {}, float scale = 0.25f);
 
 private:
   GLuint m_program{};
