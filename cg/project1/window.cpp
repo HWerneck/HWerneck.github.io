@@ -1,72 +1,8 @@
 #include "window.hpp"
 
-void Window::onEvent(SDL_Event const &event) {
-  // Keyboard events
-  if (event.type == SDL_KEYDOWN) {
-    if (event.key.keysym.sym == SDLK_SPACE)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Fire));
-    if (event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Up));
-    if (event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Down));
-    if (event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Left));
-    if (event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Right));
-  }
-  if (event.type == SDL_KEYUP) {
-    if (event.key.keysym.sym == SDLK_SPACE)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Fire));
-    if (event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Up));
-    if (event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Down));
-    if (event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Left));
-    if (event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Right));
-  }
-
-  // Mouse events
-  if (event.type == SDL_MOUSEBUTTONDOWN) {
-    if (event.button.button == SDL_BUTTON_LEFT)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Fire));
-    if (event.button.button == SDL_BUTTON_RIGHT)
-      m_gameData.m_input.set(gsl::narrow<size_t>(Input::Up));
-  }
-  if (event.type == SDL_MOUSEBUTTONUP) {
-    if (event.button.button == SDL_BUTTON_LEFT)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Fire));
-    if (event.button.button == SDL_BUTTON_RIGHT)
-      m_gameData.m_input.reset(gsl::narrow<size_t>(Input::Up));
-  }
-  if (event.type == SDL_MOUSEMOTION) {
-    glm::ivec2 mousePosition;
-    SDL_GetMouseState(&mousePosition.x, &mousePosition.y);
-
-    glm::vec2 direction{mousePosition.x - m_viewportSize.x / 2,
-                        -(mousePosition.y - m_viewportSize.y / 2)};
-
-    m_ship.m_rotation = std::atan2(direction.y, direction.x) - M_PI_2;
-  }
-}
-
 void Window::onCreate() {
   auto const assetsPath{abcg::Application::getAssetsPath()};
 
-  // Load a new font
-  auto const filename{assetsPath + "Inconsolata-Medium.ttf"};
-  m_font = ImGui::GetIO().Fonts->AddFontFromFileTTF(filename.c_str(), 60.0f);
-  if (m_font == nullptr) {
-    throw abcg::RuntimeError("Cannot load font file");
-  }
-
-  // Create program to render the other objects
-  m_objectsProgram =
-      abcg::createOpenGLProgram({{.source = assetsPath + "objects.vert",
-                                  .stage = abcg::ShaderStage::Vertex},
-                                 {.source = assetsPath + "objects.frag",
-                                  .stage = abcg::ShaderStage::Fragment}});
   // Create program to render the bubbles
   m_bubblesProgram = 
       abcg::createOpenGLProgram({{.source = assetsPath + "bubbles.vert",
@@ -89,20 +25,11 @@ void Window::onCreate() {
 
 void Window::restart() {
   onDestroy();
-  m_gameData.m_state = State::Playing;
   m_bubbles.create(m_bubblesProgram, m_numOfBubbles, m_avgBubbleSpeed);
 }
 
 void Window::onUpdate() {
   auto const deltaTime{gsl::narrow_cast<float>(getDeltaTime())};
-
-  // Wait 5 seconds before restarting
-  if (m_gameData.m_state != State::Playing &&
-      m_restartWaitTimer.elapsed() > 5) {
-    restart();
-    return;
-  }
-
   m_bubbles.update(deltaTime);
 }
 
@@ -119,19 +46,16 @@ void Window::onPaintUI() {
     auto const size{ImVec2(400, 100)};
     auto const position{ImVec2((m_viewportSize.x - size.x) / 2.0f,
                                (m_viewportSize.y - size.y) / 2.0f)};
-    /* ImGui::SetNextWindowPos(position); */
     ImGui::SetNextWindowSize(size);
     ImGui::Begin(" ", nullptr, ImGuiWindowFlags_NoDecoration);
-    /* ImGui::PushFont(m_font); */
 
     if(ImGui::Button("Restart", ImVec2(150,30))) {
       Window::restart();
     }
 
     ImGui::SliderInt("Number of Bubbles", &m_numOfBubbles, 5, 20);
-    ImGui::SliderInt("Avarage Bubble Speed", &m_avgBubbleSpeed, 10, 700);
+    ImGui::SliderInt("Avarage Bubble Speed", &m_avgBubbleSpeed,- 1000, 1000);
 
-    /* ImGui::PopFont(); */
     ImGui::End();
   }
 }

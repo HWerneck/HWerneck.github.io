@@ -6,6 +6,9 @@
 
 #include "abcgOpenGL.hpp"
 
+#include "gamedata.hpp"
+#include "ship.hpp"
+
 class Bubbles {
 public:
   void create(GLuint program, int quantity, int speed);
@@ -21,8 +24,11 @@ public:
     glm::ivec2 m_viewportSize{};
     float m_bubblespeed{};
 
+    float m_angularVelocity{};
     glm::vec4 m_color{1};
+    bool m_hit{};
     int m_polygonSides{};
+    float m_rotation{};
     float m_scale{};
     glm::vec2 m_translation{};
     glm::vec2 m_velocity{};
@@ -35,6 +41,7 @@ public:
 private:
   GLuint m_program{};
   GLint m_colorLoc{};
+  GLint m_rotationLoc{};
   GLint m_translationLoc{};
   GLint m_scaleLoc{};
 
