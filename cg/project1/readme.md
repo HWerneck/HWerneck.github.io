@@ -1,4 +1,4 @@
-Maurício Romano RA: 11013212</br>
+Maurício Romano RA: 11013212  
 Henrique Ramos Rissardo Werneck RA: 11007812
 
 ### Projeto 1 de Computação Gráfica
@@ -10,6 +10,6 @@ Outro aspecto importante para o desenvolvimento do projeto foram os shaders. O f
 
 Por fim, a interação com o usuário e seu efeito na aplicação completam o projeto. O cálculo da quantidade de objetos e suas velocidades é feito com base nos parâmetros definidos pelo usuário.
 
-• Posição inicial: valor aleatório atribuído a cada bolha;</br>
-• Cor: 2 cores atribuídas aleatoriamente para cada bolha;</br>
+• Posição inicial: valor aleatório atribuído a cada bolha;  
+• Cor: 2 cores atribuídas aleatoriamente para cada bolha;  
 • Velocidade: velocidade base atribuida pelo usuário. Para cada bublle é somado um valor aleatório para ter uma diferença de velocidade entre as bolhas.
