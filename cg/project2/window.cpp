@@ -51,7 +51,7 @@ void Window::onCreate()
   setupCar(m_car)
 }
 
-void Window::setupCar(Car &car)
+void Window::setupCar(Car &m_car)
 {
   glm::vec3 const initPos{0.0f, 1.0f, 0.0f};
   m_car.m_position = initPos;
@@ -75,7 +75,7 @@ void Window::onPaint()
   // Set uniform variables that have the same value for every model
   abcg::glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &m_viewMatrix[0][0]);
   abcg::glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
-  abcg::glUniform4f(colorLoc, 0.2f, 0.2f, 0.2f, 1.0f); //Grey
+  abcg::glUniform4f(colorLoc, 0.3f, 0.3f, 0.3f, 1.0f); //Grey
 
   // Renders the car
   // Compute model matrix of the current m_car

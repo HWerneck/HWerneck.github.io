@@ -46,7 +46,7 @@ private:
 
   GLuint m_program{};
 
-  void randomizeStar(Star &star);
+  void setupCar(Car &m_car);
 };
 
 #endif
