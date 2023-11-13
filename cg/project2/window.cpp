@@ -156,10 +156,11 @@ void Window::onPaintUI()
                               8.0f, 1.0f, 95.0f);
   } else if (currentIndex == 2)
   {
-    glm::vec3 const eye{0.0f, 20.0f, 0.0f};
+    glm::vec3 const eye{0.0f, 18.0f, 0.0f};
     glm::vec3 const at{0.0f, 0.0f, 0.0f};
     glm::vec3 const up{0.0f, 0.0f, -1.0f};
     m_viewMatrix = glm::lookAt(eye, at, up);
+    m_projMatrix = glm::perspective(glm::radians(30.0f), aspect, 0.01f, 100.0f);
   }
   ImGui::PopItemWidth();
 
