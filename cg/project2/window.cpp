@@ -43,24 +43,13 @@ void Window::onCreate() {
   glm::vec3 const up{0.0f, 1.0f, 0.0f};
   m_viewMatrix = glm::lookAt(eye, at, up);
 
-  // Setup stars
-  for (auto &star : m_stars) {
-    randomizeStar(star);
-  }
+  // Setup car
+  setupCar(m_car)
 }
 
-void Window::randomizeStar(Star &star) {
-  // Random position: x and y in [-20, 20), z in [-100, 0)
-  /* std::uniform_real_distribution<float> distPosXY(1.0f, 5.0f); */
-  /* std::uniform_real_distribution<float> distPosZ(-10.0f, 0.0f); */
-  /* star.m_position = */
-  /*     glm::vec3(distPosXY(m_randomEngine), distPosXY(m_randomEngine), */
-  /*               distPosZ(m_randomEngine)); */
+void Window::setupCar(Car &car) {
   glm::vec3 const initPos{0.0f, 1.0f, 0.0f};
-  star.m_position = initPos;
-
-  // Random rotation axis
-  /* star.m_rotationAxis = glm::sphericalRand(1.0f); */
+  m_car.m_position = initPos;
 }
 
 void Window::onUpdate() {
@@ -68,17 +57,12 @@ void Window::onUpdate() {
   auto const deltaTime{gsl::narrow_cast<float>(getDeltaTime())};
   /* m_angle = glm::wrapAngle(m_angle + glm::radians(90.0f) * deltaTime); */
 
-  // Update stars
-  for (auto &star : m_stars) {
-    // Increase z by 10 units per second
-    star.m_position.z += deltaTime * m_speed;
+  // Update car position
+  m_car.m_position.z += deltaTime * m_speed;
 
-    // If this star is behind the camera, select a new random position &
-    // orientation and move it back to -100
-    if (star.m_position.z > 10.0f) {
-      randomizeStar(star);
-      star.m_position.z = -10.0f; // Back to -100
-    }
+  if (m_car.m_position.z > 10.0f) {
+    setupCar(car);
+    m_car.m_position.z = -10.0f;
   }
 }
 
@@ -99,21 +83,19 @@ void Window::onPaint() {
   // Set uniform variables that have the same value for every model
   abcg::glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &m_viewMatrix[0][0]);
   abcg::glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
-  abcg::glUniform4f(colorLoc, 1.0f, 1.0f, 1.0f, 1.0f); // White
+  abcg::glUniform4f(colorLoc, 0.2f, 0.2f, 0.2f, 1.0f); //Grey
 
-  // Render each star
-  for (auto &star : m_stars) {
-    // Compute model matrix of the current star
-    glm::mat4 modelMatrix{1.0f};
-    modelMatrix = glm::translate(modelMatrix, star.m_position);
-    modelMatrix = glm::scale(modelMatrix, glm::vec3(0.2f));
-    /* modelMatrix = glm::rotate(modelMatrix, m_angle, star.m_rotationAxis); */
+  // Renders the car
+  // Compute model matrix of the current m_car
+  glm::mat4 modelMatrix{1.0f};
+  modelMatrix = glm::translate(modelMatrix, m_car.m_position);
+  modelMatrix = glm::scale(modelMatrix, glm::vec3(0.2f));
+  /* modelMatrix = glm::rotate(modelMatrix, m_angle, m_car.m_rotationAxis); */
 
-    // Set uniform variable
-    abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &modelMatrix[0][0]);
+  // Set uniform variable
+  abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &modelMatrix[0][0]);
 
-    m_model.render();
-  }
+  m_model.render();
 
   m_ground.paint();
 

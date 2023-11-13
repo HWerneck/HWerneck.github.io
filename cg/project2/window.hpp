@@ -24,12 +24,12 @@ private:
 
   Model m_model;
 
-  struct Star {
+  struct Car {
     glm::vec3 m_position{};
     /* glm::vec3 m_rotationAxis{}; */
   };
 
-  std::array<Star, 1> m_stars;
+  Car m_car;
 
   /* float m_angle{}; */
    
