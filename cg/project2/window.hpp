@@ -30,13 +30,14 @@ private:
   struct Car
   {
     glm::vec3 m_position{};
-    /*glm::vec3 m_rotationAxis{};*/
+    float m_angle;
+    glm::vec3 m_rotationAxis{};
   };
 
   Car m_car;
    
   float m_speed{0.0f};
-  /*float m_angle{};*/
+  float m_angleRot{};
   
   glm::mat4 m_viewMatrix{1.0f};
   glm::mat4 m_projMatrix{1.0f};

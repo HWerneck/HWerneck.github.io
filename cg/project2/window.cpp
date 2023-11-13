@@ -17,6 +17,10 @@ void Window::onEvent(SDL_Event const &event)
       m_speed += 0.5f;
       if (m_speed > 10.0f) m_speed = 10.0f;
     }
+    if (event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a)
+      m_angleRot = 0.01f;
+    if (event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d)
+      m_angleRot = -0.01f;
   }
   if (event.type == SDL_KEYUP)
   {
@@ -32,6 +36,12 @@ void Window::onEvent(SDL_Event const &event)
       m_speed += -0.1f;
       if (m_speed < 0.0f) m_speed = 0.0f;
     }
+    if ((event.key.keysym.sym == SDLK_LEFT || event.key.keysym.sym == SDLK_a) &&
+        m_angleRot > 0)
+      m_angleRot = 0.0f;
+    if ((event.key.keysym.sym == SDLK_RIGHT || event.key.keysym.sym == SDLK_d) &&
+        m_angleRot < 0)
+      m_angleRot = 0.0f;
   }
 }
 
@@ -65,6 +75,8 @@ void Window::setupCar(Car &m_car)
 {
   glm::vec3 const initPos{0.0f, 0.3f, 3.5f};
   m_car.m_position = initPos;
+  m_car.m_angle = 0.0f;
+  m_car.m_rotationAxis = {0.0f, 1.0f, 0.0f};
 }
 
 void Window::onPaint()
@@ -92,7 +104,7 @@ void Window::onPaint()
   glm::mat4 modelMatrix{1.0f};
   modelMatrix = glm::translate(modelMatrix, m_car.m_position);
   modelMatrix = glm::scale(modelMatrix, glm::vec3(0.2f));
-  /* modelMatrix = glm::rotate(modelMatrix, m_angle, m_car.m_rotationAxis); */
+  modelMatrix = glm::rotate(modelMatrix, m_car.m_angle, m_car.m_rotationAxis);
 
   // Set uniform variable
   abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &modelMatrix[0][0]);
@@ -172,7 +184,6 @@ void Window::onResize(glm::ivec2 const &size) { m_viewportSize = size; }
 void Window::onUpdate()
 {
   auto const deltaTime{gsl::narrow_cast<float>(getDeltaTime())};
-  /*m_angle = glm::wrapAngle(m_angle + glm::radians(90.0f) * deltaTime);*/
   if (m_speed < 0.0f)
   {
     m_speed += 0.01f;
@@ -183,17 +194,24 @@ void Window::onUpdate()
     if (m_speed < 0.0f) m_speed = 0.0f;
   }
 
-  //Update car position
-  m_car.m_position.z += deltaTime * m_speed;
+  //Update m_car position
+  m_car.m_angle += m_angleRot;
+  m_car.m_position.z += cos(m_car.m_angle) * deltaTime * m_speed;
+  m_car.m_position.x += sin(m_car.m_angle) * deltaTime * m_speed;
 
   if (m_car.m_position.z > 5.0f)
   {
-    setupCar(m_car);
     m_car.m_position.z = -5.0f;
   } else if (m_car.m_position.z < -5.0f)
   {
-    setupCar(m_car);
     m_car.m_position.z = 5.0f;
+  }
+  if (m_car.m_position.x > 5.0f)
+  {
+    m_car.m_position.x = -5.0f;
+  } else if (m_car.m_position.x < -5.0f)
+  {
+    m_car.m_position.x = 5.0f;
   }
 }
 
