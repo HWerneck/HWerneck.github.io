@@ -1,7 +1,9 @@
 #include "window.hpp"
 
-int main(int argc, char **argv) {
-  try {
+int main(int argc, char **argv)
+{
+  try
+  {
     abcg::Application app(argc, argv);
 
     Window window;
@@ -13,7 +15,8 @@ int main(int argc, char **argv) {
     });
 
     app.run(window);
-  } catch (std::exception const &exception) {
+  } catch (std::exception const &exception)
+  {
     fmt::print(stderr, "{}\n", exception.what());
     return -1;
   }

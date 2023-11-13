@@ -7,14 +7,17 @@
 #include "model.hpp"
 #include "ground.hpp"
 
-class Window : public abcg::OpenGLWindow {
+class Window : public abcg::OpenGLWindow
+{
 protected:
   void onEvent(SDL_Event const &event) override;
   void onCreate() override;
-  void onUpdate() override;
+
   void onPaint() override;
   void onPaintUI() override;
   void onResize(glm::ivec2 const &size) override;
+
+  void onUpdate() override;
   void onDestroy() override;
 
 private:
@@ -24,16 +27,16 @@ private:
 
   Model m_model;
 
-  struct Car {
+  struct Car
+  {
     glm::vec3 m_position{};
-    /* glm::vec3 m_rotationAxis{}; */
+    /*glm::vec3 m_rotationAxis{};*/
   };
 
   Car m_car;
-
-  /* float m_angle{}; */
    
   float m_speed{0.0f};
+  /*float m_angle{};*/
   
   glm::mat4 m_viewMatrix{1.0f};
   glm::mat4 m_projMatrix{1.0f};

@@ -1,6 +1,7 @@
 #include "ground.hpp"
 
-void Ground::create(GLuint program) {
+void Ground::create(GLuint program)
+{
   // Unit quad on the xz plane
   std::array<glm::vec3, 4> vertices{{{-m_side, 0.0f, m_side},
                                      {-m_side, 0.0f, -m_side},
@@ -31,14 +32,17 @@ void Ground::create(GLuint program) {
   m_colorLoc = abcg::glGetUniformLocation(program, "color");
 }
 
-void Ground::paint() {
+void Ground::paint()
+{
   abcg::glBindVertexArray(m_VAO);
 
   // Draw a grid of 2N+1 x 2N+1 tiles on the xz plane, centered around the
   // origin
   auto const N{10};
-  for (auto const z : iter::range(-N, N + 1)) {
-    for (auto const x : iter::range(-N, N + 1)) {
+  for (auto const z : iter::range(-N, N + 1))
+  {
+    for (auto const x : iter::range(-N, N + 1))
+    {
       // Set model matrix as a translation matrix
       glm::mat4 model{1.0f};
       model = glm::translate(model, glm::vec3(2*x*m_side, 0.0f, 2*z*m_side));
@@ -55,7 +59,8 @@ void Ground::paint() {
   abcg::glBindVertexArray(0);
 }
 
-void Ground::destroy() {
+void Ground::destroy()
+{
   abcg::glDeleteBuffers(1, &m_VBO);
   abcg::glDeleteVertexArrays(1, &m_VAO);
 }

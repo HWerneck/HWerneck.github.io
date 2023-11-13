@@ -3,13 +3,15 @@
 
 #include "abcgOpenGL.hpp"
 
-struct Vertex {
+struct Vertex
+{
   glm::vec3 position{};
 
   friend bool operator==(Vertex const &, Vertex const &) = default;
 };
 
-class Model {
+class Model
+{
 public:
   void loadObj(std::string_view path, bool standardize = true);
   void render(int numTriangles = -1) const;

@@ -3,7 +3,8 @@
 
 #include "abcgOpenGL.hpp"
 
-class Ground {
+class Ground
+{
 public:
   void create(GLuint program);
   void paint();
