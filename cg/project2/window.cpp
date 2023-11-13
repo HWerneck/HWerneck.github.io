@@ -8,18 +8,30 @@ void Window::onEvent(SDL_Event const &event)
   if (event.type == SDL_KEYDOWN)
   {
     if (event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w)
-      m_speed = 1.0f;
+    {
+      m_speed += -0.5f;
+      if (m_speed < -20.0f) m_speed = -20.0f;
+    }
     if (event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s)
-      m_speed= -1.0f;
+    {
+      m_speed += 0.5f;
+      if (m_speed > 10.0f) m_speed = 10.0f;
+    }
   }
   if (event.type == SDL_KEYUP)
   {
     if ((event.key.keysym.sym == SDLK_UP || event.key.keysym.sym == SDLK_w) &&
-        m_speed> 0)
-      m_speed = 0.0f;
-    if ((event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s) &&
         m_speed < 0)
-      m_speed = 0.0f;
+    {
+      m_speed += 0.1f;
+      if (m_speed > 0.0f) m_speed = 0.0f;
+    }
+    if ((event.key.keysym.sym == SDLK_DOWN || event.key.keysym.sym == SDLK_s) &&
+        m_speed > 0)
+    {
+      m_speed += -0.1f;
+      if (m_speed < 0.0f) m_speed = 0.0f;
+    }
   }
 }
 
@@ -41,19 +53,17 @@ void Window::onCreate()
   m_model.loadObj(assetsPath + "box.obj");
   m_model.setupVAO(m_program);
 
-  // Camera at (0,0,0) and looking towards the negative z
-  glm::vec3 const eye{10.0f, 10.0f, 10.0f};
+  glm::vec3 const eye{8.0f, 8.0f, 8.0f};
   glm::vec3 const at{0.0f, 0.0f, 0.0f};
   glm::vec3 const up{0.0f, 1.0f, 0.0f};
   m_viewMatrix = glm::lookAt(eye, at, up);
 
-  // Setup car
-  setupCar(m_car)
+  setupCar(m_car);
 }
 
 void Window::setupCar(Car &m_car)
 {
-  glm::vec3 const initPos{0.0f, 1.0f, 0.0f};
+  glm::vec3 const initPos{0.0f, 0.3f, 3.5f};
   m_car.m_position = initPos;
 }
 
@@ -105,7 +115,7 @@ void Window::onPaintUI()
 
   ImGui::PushItemWidth(120);
   static std::size_t currentIndex{};
-  std::vector<std::string> const comboItems{"Perspective", "Orthographic"};
+  std::vector<std::string> const comboItems{"Perspective", "Orthographic", "Top View"};
 
   if (ImGui::BeginCombo("Projection",
                         comboItems.at(currentIndex).c_str()))
@@ -127,14 +137,29 @@ void Window::onPaintUI()
                     gsl::narrow<float>(m_viewportSize.y)};
   if (currentIndex == 0)
   {
+    glm::vec3 const eye{10.0f, 10.0f, 10.0f};
+    glm::vec3 const at{0.0f, 0.0f, 0.0f};
+    glm::vec3 const up{0.0f, 1.0f, 0.0f};
+    m_viewMatrix = glm::lookAt(eye, at, up);
+
     m_projMatrix =
         glm::perspective(glm::radians(m_FOV), aspect, 0.01f, 100.0f);
 
-    ImGui::SliderFloat("FOV", &m_FOV, 5.0f, 179.0f, "%.0f degrees");
-  } else
+    ImGui::SliderFloat("FOV", &m_FOV, 1.0f, 179.0f, "%.0f degrees");
+  } else if (currentIndex == 1)
   {
-    m_projMatrix = glm::ortho(-20.0f * aspect, 20.0f * aspect, -20.0f,
-                              20.0f, 0.01f, 100.0f);
+    glm::vec3 const eye{10.0f, 10.0f, 10.0f};
+    glm::vec3 const at{0.0f, 0.0f, 0.0f};
+    glm::vec3 const up{0.0f, 1.0f, 0.0f};
+    m_viewMatrix = glm::lookAt(eye, at, up);
+    m_projMatrix = glm::ortho(-5.0f * aspect, 5.0f * aspect, -8.0f,
+                              8.0f, 1.0f, 95.0f);
+  } else if (currentIndex == 2)
+  {
+    glm::vec3 const eye{0.0f, 20.0f, 0.0f};
+    glm::vec3 const at{0.0f, 0.0f, 0.0f};
+    glm::vec3 const up{0.0f, 0.0f, -1.0f};
+    m_viewMatrix = glm::lookAt(eye, at, up);
   }
   ImGui::PopItemWidth();
 
@@ -147,14 +172,27 @@ void Window::onUpdate()
 {
   auto const deltaTime{gsl::narrow_cast<float>(getDeltaTime())};
   /*m_angle = glm::wrapAngle(m_angle + glm::radians(90.0f) * deltaTime);*/
+  if (m_speed < 0.0f)
+  {
+    m_speed += 0.01f;
+    if (m_speed > 0.0f) m_speed = 0.0f;
+  } else if (m_speed > 0.0f)
+  {
+    m_speed += -0.01f;
+    if (m_speed < 0.0f) m_speed = 0.0f;
+  }
 
   //Update car position
   m_car.m_position.z += deltaTime * m_speed;
 
-  if (m_car.m_position.z > 10.0f)
+  if (m_car.m_position.z > 5.0f)
   {
-    setupCar(car);
-    m_car.m_position.z = -10.0f;
+    setupCar(m_car);
+    m_car.m_position.z = -5.0f;
+  } else if (m_car.m_position.z < -5.0f)
+  {
+    setupCar(m_car);
+    m_car.m_position.z = 5.0f;
   }
 }
 
