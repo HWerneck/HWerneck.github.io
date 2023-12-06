@@ -57,9 +57,9 @@ void Window::onCreate()
 
 
   m_program =
-      abcg::createOpenGLProgram({{.source = assetsPath + "depth.vert",
+      abcg::createOpenGLProgram({{.source = assetsPath + "normal.vert",
                                   .stage = abcg::ShaderStage::Vertex},
-                                 {.source = assetsPath + "depth.frag",
+                                 {.source = assetsPath + "normal.frag",
                                   .stage = abcg::ShaderStage::Fragment}});
 
   m_ground.create(m_program);
@@ -87,7 +87,8 @@ void Window::setupCar(Car &m_car)
   m_car.m_rotationAxis = {0.0f, 1.0f, 0.0f};
 }
 
-void Window::setupBlock(Block &m_block){
+void Window::setupBlock(Block &m_block)
+{
   std::uniform_real_distribution<float> posXZ(-m_ground.m_maxLimit * 0.9f, +m_ground.m_maxLimit * 0.9f);
   glm::vec3 const initPos{posXZ(m_randomEngine), 0.3f, posXZ(m_randomEngine)};
   m_block.m_position = initPos;
@@ -112,33 +113,37 @@ void Window::onPaint()
   // Get location of uniform variables
   auto const viewMatrixLoc{abcg::glGetUniformLocation(m_program, "viewMatrix")};
   auto const projMatrixLoc{abcg::glGetUniformLocation(m_program, "projMatrix")};
-  auto const modelMatrixLoc{
-      abcg::glGetUniformLocation(m_program, "modelMatrix")};
-  auto const colorLoc{abcg::glGetUniformLocation(m_program, "color")};
+  auto const modelMatrixLoc{abcg::glGetUniformLocation(m_program, "modelMatrix")};
+  auto const normalMatrixLoc{abcg::glGetUniformLocation(m_program, "normalMatrix")};
+  //auto const colorLoc{abcg::glGetUniformLocation(m_program, "color")};
 
   // Set uniform variables that have the same value for every model
   abcg::glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &m_viewMatrix[0][0]);
   abcg::glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
-  abcg::glUniform4f(colorLoc, 0.3f, 0.3f, 0.3f, 1.0f); //Grey
+  //abcg::glUniform4f(colorLoc, 0.3f, 0.3f, 0.3f, 1.0f); //Grey
 
   // Renders the car
   // Compute model matrix of the current m_car
-  glm::mat4 modelMatrix{1.0f};
-  modelMatrix = glm::translate(modelMatrix, m_car.m_position);
-  modelMatrix = glm::scale(modelMatrix, glm::vec3(0.2f));
-  modelMatrix = glm::rotate(modelMatrix, m_car.m_angle, m_car.m_rotationAxis);
+  glm::mat4 car_modelMatrix{1.0f};
+  car_modelMatrix = glm::translate(car_modelMatrix, m_car.m_position);
+  car_modelMatrix = glm::scale(car_modelMatrix, glm::vec3(0.2f));
+  car_modelMatrix = glm::rotate(car_modelMatrix, m_car.m_angle, m_car.m_rotationAxis);
 
-  abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &modelMatrix[0][0]);
+  abcg::glUniformMatrix4fv(modelMatrixLoc, 1, GL_FALSE, &car_modelMatrix[0][0]);
 
   m_model.render();
   
  // Set uniform variables that have the same value for every model
   abcg::glUniformMatrix4fv(viewMatrixLoc, 1, GL_FALSE, &m_viewMatrix[0][0]);
   abcg::glUniformMatrix4fv(projMatrixLoc, 1, GL_FALSE, &m_projMatrix[0][0]);
-  abcg::glUniform4f(colorLoc, 0.3f, 0.3f, 0.3f, 1.0f); //Grey
+  //abcg::glUniform4f(colorLoc, 0.3f, 0.3f, 0.3f, 1.0f); //Grey
+
+  auto const car_modelViewMatrix{glm::mat3(m_viewMatrix * car_modelMatrix)};
+  auto const car_normalMatrix{glm::inverseTranspose(car_modelViewMatrix)};
+  abcg::glUniformMatrix3fv(normalMatrixLoc, 1, GL_FALSE, &car_normalMatrix[0][0]);
 
   // Renders the block
-  // Compute model matrix of the current m_car
+  // Compute model matrix of the current m_block
   glm::mat4 block_modelMatrix{1.0f};
   block_modelMatrix = glm::translate(block_modelMatrix, m_block.m_position);
   block_modelMatrix = glm::scale(block_modelMatrix, glm::vec3(0.2f));

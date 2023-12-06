@@ -8,7 +8,8 @@ template <> struct std::hash<Vertex>
   size_t operator()(Vertex const &vertex) const noexcept
   {
     auto const h1{std::hash<glm::vec3>()(vertex.position)};
-    return h1;
+    auto const h2{std::hash<glm::vec3>()(vertex.normal)};
+    return abcg::hashCombine(h1, h2);
   }
 };
 
@@ -37,6 +38,8 @@ void Model::loadObj(std::string_view path, bool standardize)
   m_vertices.clear();
   m_indices.clear();
 
+  m_hasNormals = false;
+
   // A key:value map with key=Vertex and value=index
   std::unordered_map<Vertex, GLuint> hash{};
 
@@ -51,11 +54,21 @@ void Model::loadObj(std::string_view path, bool standardize)
 
       // Vertex position
       auto const startIndex{3 * index.vertex_index};
-      auto const vx{attrib.vertices.at(startIndex + 0)};
-      auto const vy{attrib.vertices.at(startIndex + 2)};
-      auto const vz{attrib.vertices.at(startIndex + 1)};
+      glm::vec3 position {attrib.vertices.at(startIndex + 0),
+                          attrib.vertices.at(startIndex + 2),
+                          attrib.vertices.at(startIndex + 1)};
 
-      Vertex const vertex{.position = {vx, vy, vz}};
+      // Vertex normal
+      glm::vec3 normal{};
+      if (index.normal_index >= 0) {
+        m_hasNormals = true;
+        auto const normalStartIndex{3 * index.normal_index};
+        normal = {attrib.normals.at(normalStartIndex + 0),
+                  attrib.normals.at(normalStartIndex + 1),
+                  attrib.normals.at(normalStartIndex + 2)};
+      }
+
+      Vertex const vertex{.position = position, .normal = normal};
 
       // If hash doesn't contain this vertex
       if (!hash.contains(vertex))
@@ -73,6 +86,11 @@ void Model::loadObj(std::string_view path, bool standardize)
   if (standardize)
   {
     Model::standardize();
+  }
+
+  if (!m_hasNormals)
+  {
+    computeNormals();
   }
 
   createBuffers();
@@ -113,6 +131,16 @@ void Model::setupVAO(GLuint program)
                                 sizeof(Vertex), nullptr);
   }
 
+  auto const normalAttribute{abcg::glGetAttribLocation(program, "inNormal")};
+  if (normalAttribute >= 0)
+  {
+    abcg::glEnableVertexAttribArray(normalAttribute);
+    auto const offset{offsetof(Vertex, normal)};
+    abcg::glVertexAttribPointer(normalAttribute, 3, GL_FLOAT, GL_FALSE,
+                                sizeof(Vertex),
+                                reinterpret_cast<void *>(offset));
+  }
+
   // End of binding
   abcg::glBindBuffer(GL_ARRAY_BUFFER, 0);
   abcg::glBindVertexArray(0);
@@ -123,6 +151,38 @@ void Model::destroy() const
   abcg::glDeleteBuffers(1, &m_EBO);
   abcg::glDeleteBuffers(1, &m_VBO);
   abcg::glDeleteVertexArrays(1, &m_VAO);
+}
+
+void Model::computeNormals() {
+  // Clear previous vertex normals
+  for (auto &vertex : m_vertices) {
+    vertex.normal = glm::vec3(0.0f);
+  }
+
+  // Compute face normals
+  for (auto const offset : iter::range(0UL, m_indices.size(), 3UL)) {
+    // Get face vertices
+    auto &a{m_vertices.at(m_indices.at(offset + 0))};
+    auto &b{m_vertices.at(m_indices.at(offset + 1))};
+    auto &c{m_vertices.at(m_indices.at(offset + 2))};
+
+    // Compute normal
+    auto const edge1{b.position - a.position};
+    auto const edge2{c.position - b.position};
+    auto const normal{glm::cross(edge1, edge2)};
+
+    // Accumulate on vertices
+    a.normal += normal;
+    b.normal += normal;
+    c.normal += normal;
+  }
+
+  // Normalize
+  for (auto &vertex : m_vertices) {
+    vertex.normal = glm::normalize(vertex.normal);
+  }
+
+  m_hasNormals = true;
 }
 
 void Model::createBuffers()

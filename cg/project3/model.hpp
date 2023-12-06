@@ -6,6 +6,7 @@
 struct Vertex
 {
   glm::vec3 position{};
+  glm::vec3 normal{};
 
   friend bool operator==(Vertex const &, Vertex const &) = default;
 };
@@ -17,6 +18,9 @@ public:
   void render(int numTriangles = -1) const;
   void setupVAO(GLuint program);
   void destroy() const;
+  bool m_hasNormals{false};
+
+  void computeNormals();
 
   [[nodiscard]] int getNumTriangles() const {
     return gsl::narrow<int>(m_indices.size()) / 3;
