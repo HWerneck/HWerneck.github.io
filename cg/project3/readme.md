@@ -25,13 +25,15 @@ Nenhuma alteração significativa.
 Modificado para incluir os vetores normais no vértices.  
 A estrutura dos vértices (struct Vertex) inclui um novo campo normal de tipo glm::vec3, como mostrado abaixo.  
 
-> struct Vertex  
-> {  
->   glm::vec3 position{};  
->   glm::vec3 normal{};  
->   
->   friend bool operator==(Vertex const &, Vertex const &) = default;  
-> };  
+``` 
+struct Vertex  
+{  
+  glm::vec3 position{};  
+  glm::vec3 normal{};  
+  
+  friend bool operator==(Vertex const &, Vertex const &) = default;  
+};
+```
 
 Também foi adicionada uma declaração para computar os vetores normais, caso o modelo não disponha dos vetores já calculados.
 
