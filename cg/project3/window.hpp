@@ -27,7 +27,7 @@ private:
 
   Model m_model_block;
 
-  Model m_model;
+  Model m_model_car;
 
   struct Car
   {
@@ -57,7 +57,9 @@ private:
 
   Ground m_ground;
 
-  GLuint m_program{};
+  GLuint m_carProgram{};
+  GLuint m_blockProgram{};
+  //GLuint m_groundProgram{};
 
   void setupCar(Car &m_car);
   void setupBlock(Block &m_block);
